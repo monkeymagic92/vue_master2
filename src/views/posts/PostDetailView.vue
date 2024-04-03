@@ -27,10 +27,12 @@
 
 <script setup>
 import { useRoute, useRouter } from 'vue-router'
+import { getPostById } from '@/api/posts'
 
 const route = useRoute()
 const router = useRouter()
 const id = route.params.id
+console.log('post: ', getPostById(id))
 
 const goListPage = () => router.push({ name: 'PostList' })
 const goEditPage = () => router.push({ name: 'PostEdit', params: { id: id } })
