@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">GYM CODING</a>
+        <RouterLink class="navbar-brand" active-class="active" to="/">GYM CODING</RouterLink>
         <button
           class="navbar-toggler"
           type="button"
@@ -24,6 +24,9 @@
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link" active-class="active" to="/posts"> 게시글 </RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink class="nav-link" active-class="active" to="/nested"> Nested </RouterLink>
             </li>
           </ul>
           <div class="d-flex" role="search">
