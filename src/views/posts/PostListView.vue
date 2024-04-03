@@ -12,17 +12,23 @@
         >
         </PostItem>
       </div>
+      <hr class="my-4" />
+      <AppCard>
+        <PostDetailView :id="2"></PostDetailView>
+      </AppCard>
     </div>
   </div>
 </template>
 
 <script setup>
 import PostItem from '@/components/posts/PostItem.vue'
+import PostDetailView from '@/views/posts/PostDetailView.vue'
+import AppCard from '@/components/AppCard.vue'
 import { getPosts } from '@/api/posts'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-const router2 = useRouter()
+const router = useRouter()
 
 const posts = ref([])
 const fetchPosts = () => {
@@ -35,7 +41,7 @@ const goPage = (id) => {
   //   router.push('/posts/' + id)
 
   // name을 지정해서 객체를 넘기는 방법
-  router2.push({
+  router.push({
     name: 'PostDetail',
     params: {
       id
