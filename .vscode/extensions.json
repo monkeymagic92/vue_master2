@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "esbenp.prettier-vscode",
+    "pranaygp.vscode-css-peek",
+    "ecmel.vscode-html-css"
+  ]
+}
