@@ -1,18 +1,20 @@
 <template>
-  <main>
-    <div>
-      <h2>About View</h2>
-      <p>{{ $route.name }}</p>
-      <button class="btn btn-primary" @click="$router.push('/')">Home 으로 이동</button>
-    </div>
-  </main>
+	<main>
+		<div>
+			<h2>About View</h2>
+			<p>{{ $route.name }}</p>
+			<button class="btn btn-primary" @click="$router.push('/')">
+				Home 으로 이동
+			</button>
+		</div>
+	</main>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router';
 
-const route = useRoute()
-console.log('route.path : ', route.path)
+const route = useRoute();
+console.log('route.path : ', route.path);
 </script>
 
 <style lang="scss" scoped></style>
